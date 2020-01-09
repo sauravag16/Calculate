@@ -109,7 +109,9 @@ let inventory = [
 let skipTotals = [1,2,3]
 
 function init() {
-    inventory = inventory
+    inventory = inventory.sort(function(a, b){
+        if(a.id < b.id) { return -1; }
+        if(a.id > b.id) { return 1; }
         return 0;
     })
     inventory.forEach(it=>{getItem(it)});
