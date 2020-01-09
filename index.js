@@ -109,11 +109,9 @@ let inventory = [
 let skipTotals = [1,2,3]
 
 function init() {
-#    inventory = inventory.sort(function(a, b){
- #       if(a.name < b.name) { return -1; }
-  #      if(a.name > b.name) { return 1; }
-   #     return 0;
-    #})
+    inventory = inventory
+        return 0;
+    })
     inventory.forEach(it=>{getItem(it)});
     const skippedInv = inventory.filter(it=>skipTotals.includes(it.id))
     $('body').find('.whole_total_wo').append(`<span class="skipped">NSTR Value: </span> <span class="sk_total total_val">0</span>`);
