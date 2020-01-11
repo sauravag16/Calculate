@@ -155,6 +155,11 @@ function getSkipTotals() {
     return t
 }
 
+function clear()
+{   
+   document.getElementById("container").reset();
+}
+
 $(document).ready(function(){
     init()
 });
